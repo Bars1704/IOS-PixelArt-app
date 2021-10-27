@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8457C8552728DB71007CEEBE /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457C8512728DB71007CEEBE /* Line.swift */; };
+		8457C8562728DB71007CEEBE /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457C8522728DB71007CEEBE /* DrawingView.swift */; };
+		8457C8572728DB71007CEEBE /* DrawingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457C8532728DB71007CEEBE /* DrawingEngine.swift */; };
+		8457C8582728DB71007CEEBE /* DrawingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457C8542728DB71007CEEBE /* DrawingShape.swift */; };
 		8464766A26ECF0EB00031763 /* IOS_PixelArt_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464766926ECF0EB00031763 /* IOS_PixelArt_appApp.swift */; };
-		8464766C26ECF0EB00031763 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464766B26ECF0EB00031763 /* ContentView.swift */; };
 		8464766E26ECF0ED00031763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464766D26ECF0ED00031763 /* Assets.xcassets */; };
 		8464767126ECF0ED00031763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464767026ECF0ED00031763 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -31,9 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8457C8512728DB71007CEEBE /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		8457C8522728DB71007CEEBE /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		8457C8532728DB71007CEEBE /* DrawingEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingEngine.swift; sourceTree = "<group>"; };
+		8457C8542728DB71007CEEBE /* DrawingShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingShape.swift; sourceTree = "<group>"; };
 		8464766626ECF0EB00031763 /* IOS-PixelArt-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-PixelArt-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464766926ECF0EB00031763 /* IOS_PixelArt_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_PixelArt_appApp.swift; sourceTree = "<group>"; };
-		8464766B26ECF0EB00031763 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8464766D26ECF0ED00031763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8464767026ECF0ED00031763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8464767226ECF0ED00031763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,7 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				8464766926ECF0EB00031763 /* IOS_PixelArt_appApp.swift */,
-				8464766B26ECF0EB00031763 /* ContentView.swift */,
+				8457C8532728DB71007CEEBE /* DrawingEngine.swift */,
+				8457C8542728DB71007CEEBE /* DrawingShape.swift */,
+				8457C8522728DB71007CEEBE /* DrawingView.swift */,
+				8457C8512728DB71007CEEBE /* Line.swift */,
 				8464766D26ECF0ED00031763 /* Assets.xcassets */,
 				8464767226ECF0ED00031763 /* Info.plist */,
 				8464766F26ECF0ED00031763 /* Preview Content */,
@@ -233,8 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8464766C26ECF0EB00031763 /* ContentView.swift in Sources */,
+				8457C8582728DB71007CEEBE /* DrawingShape.swift in Sources */,
+				8457C8572728DB71007CEEBE /* DrawingEngine.swift in Sources */,
+				8457C8552728DB71007CEEBE /* Line.swift in Sources */,
 				8464766A26ECF0EB00031763 /* IOS_PixelArt_appApp.swift in Sources */,
+				8457C8562728DB71007CEEBE /* DrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

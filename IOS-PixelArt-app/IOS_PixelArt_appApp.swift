@@ -11,7 +11,7 @@ import SwiftUI
 struct IOS_PixelArt_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DrawingView()
         }
     }
 }
