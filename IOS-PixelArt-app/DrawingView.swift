@@ -3,18 +3,64 @@ import SwiftUI
 struct DrawingView: View {
     
     @State private var lines = [Line]()
+    @State private var deletedLines = [Line]()
     
     @State private var selectedColor: Color = .black
     @State private var selectedLineWidth: CGFloat = 1
     
     let engine = DrawingEngine()
+    @State private var showConfirmation: Bool = false
     
-    let xSize:CGFloat = 20;
+    let xSize:CGFloat = 200;
     let ySize:CGFloat = 20;
     
     var body: some View {
         
         VStack {
+            
+            HStack {
+                ColorPicker("line color", selection: $selectedColor)
+                    .labelsHidden()
+                Slider(value: $selectedLineWidth, in: 1...20) {
+                    Text("linewidth")
+                }.frame(maxWidth: 100)
+                Text(String(format: "%.0f", selectedLineWidth))
+                
+                Spacer()
+                
+                Button {
+                    let last = lines.removeLast()
+                    deletedLines.append(last)
+                } label: {
+                    Image(systemName: "arrow.uturn.backward.circle")
+                        .imageScale(.large)
+                }.disabled(lines.count == 0)
+                
+                Button {
+                    let last = deletedLines.removeLast()
+                    
+                    lines.append(last)
+                } label: {
+                    Image(systemName: "arrow.uturn.forward.circle")
+                        .imageScale(.large)
+                }.disabled(deletedLines.count == 0)
+
+                Button(action: {
+                   showConfirmation = true
+                }) {
+                    Text("Delete")
+                }.foregroundColor(.red)
+                    .confirmationDialog(Text("Are you sure you want to delete everything?"), isPresented: $showConfirmation) {
+                        
+                        Button("Delete", role: .destructive) {
+                            lines = [Line]()
+                            deletedLines = [Line]()
+                        }
+                    }
+                
+            }.padding()
+            
+    
         Canvas { context, size in
 
             context.scaleBy(x: xSize, y: ySize)
@@ -49,11 +95,5 @@ struct DrawingView: View {
         ).scaledToFit()
             
         }
-    }
-}
-
-struct DrawingView_Previews: PreviewProvider {
-    static var previews: some View {
-        DrawingView()
     }
 }
